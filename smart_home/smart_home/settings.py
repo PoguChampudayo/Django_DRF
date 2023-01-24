@@ -12,7 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-
+from dotenv import load_dotenv
+load_dotenv()
 password = os.environ.get('Password')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -87,7 +88,7 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': '5432',
         'USER': 'postgres',
-        'PASSWORD': 'zv2uZBYN',
+        'PASSWORD': password,
     }
 }
 
